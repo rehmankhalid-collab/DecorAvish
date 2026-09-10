@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DecorAvish | Where Decor Meets Lavish Living</title>
 <meta name="description" content="DecorAvish is a modern luxury décor brand crafting handmade calligraphy, 3D textured, fine art and abstract wall pieces that elevate homes, offices and every space that deserves a touch of beauty.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2334432f'/%3E%3Cpath d='M24 8 L37 20 H31 V39 H17 V20 H11 Z' fill='none' stroke='%23e4c98a' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='27' r='3.4' fill='none' stroke='%23e4c98a' stroke-width='2.2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,9 +27,9 @@
 
     <nav class="main-nav" id="mainNav">
       <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
       <a href="#collections">Collections</a>
-      <a href="#featured">Featured</a>
-      <a href="#why-us">Why Us</a>
+      <a href="#wall-lab">Style It</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -68,9 +69,15 @@
       </div>
 
       <div class="hero-art" aria-hidden="true">
-        <div class="frame frame-1 art-calligraphy"></div>
-        <div class="frame frame-2 art-textured"></div>
-        <div class="frame frame-3 art-abstract"></div>
+        <div class="frame frame-1 art-calligraphy">
+          <img src="images/gallery/asma-ul-husna.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="frame frame-2 art-landscape">
+          <img src="images/gallery/birch-forest.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="frame frame-3 art-textured">
+          <img src="images/gallery/textured-gold-abstract.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+        </div>
       </div>
     </div>
   </section>
@@ -101,10 +108,89 @@
     </div>
   </section>
 
+  <section class="artwork-carousel" id="gallery" aria-label="Featured artwork gallery">
+    <div class="container carousel-head">
+      <div>
+        <p class="eyebrow">The Gallery</p>
+        <h2 class="section-title">Recently Handcrafted</h2>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous artwork">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next artwork">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <ul class="carousel-track" id="carouselTrack">
+
+      <li class="carousel-slide">
+        <div class="slide-media art-calligraphy">
+          <img src="images/gallery/asma-ul-husna.jpg" alt="Custom Asma-ul-Husna calligraphy masterpiece" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Asma-ul-Husna Masterpiece</h3><p>Calligraphy &amp; Islamic Art</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-dervish">
+          <img src="images/gallery/dervish-crimson.jpg" alt="Whirling dervish painting with crimson calligraphy backdrop" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Whirling Dervish, Crimson</h3><p>Sufi &amp; Spiritual Art</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-landscape">
+          <img src="images/gallery/waterfall-canyon.jpg" alt="Waterfall and mountain landscape painting" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Highland Waterfall</h3><p>Landscape &amp; Nature</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-textured">
+          <img src="images/gallery/textured-gold-abstract.jpg" alt="3D textured abstract painting with gold leafing" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Gilded Peaks</h3><p>3D Textured &amp; Gold Leaf</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-equestrian">
+          <img src="images/gallery/horse-classic.jpg" alt="Hand-painted equestrian portrait" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Classic Equestrian Portrait</h3><p>Fine Art &amp; Portraits</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-floral">
+          <img src="images/gallery/rose-macro.jpg" alt="Embellished rose floral painting" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Golden Rose</h3><p>Floral &amp; Botanical</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-abstract">
+          <img src="images/gallery/coastal-sunset.jpg" alt="Coastal sunset oil painting" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Coastal Serenity, Sunset</h3><p>Landscape &amp; Nature</p></div>
+      </li>
+
+      <li class="carousel-slide">
+        <div class="slide-media art-sculptural">
+          <img src="images/gallery/led-medallion.jpg" alt="Backlit gold circular sculptural artwork" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="slide-caption"><h3>Backlit Gold Medallion</h3><p>Sculptural &amp; Backlit Art</p></div>
+      </li>
+
+    </ul>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
   <section class="collections" id="collections">
     <div class="container">
       <p class="eyebrow center">Collections</p>
-      <h2 class="section-title center">Five Ways to Elevate a Wall</h2>
+      <h2 class="section-title center">Seven Ways to Elevate a Wall</h2>
       <p class="section-lede center">
         Every collection is handcrafted to order — browse a style below, then DM or
         WhatsApp us for pricing, sizing and custom requests.
@@ -113,38 +199,66 @@
       <div class="collection-grid">
 
         <article class="collection-card">
-          <div class="collection-art art-calligraphy"></div>
+          <div class="collection-art art-calligraphy">
+            <img src="images/gallery/asma-ul-husna.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
           <h3>Calligraphy &amp; Islamic Art</h3>
           <p>Bespoke Arabic calligraphy pieces that turn empty walls into spaces of peace and spiritual reflection.</p>
           <div class="tags"><span>#CalligraphyArt</span><span>#IslamicWallArt</span></div>
         </article>
 
         <article class="collection-card">
-          <div class="collection-art art-textured"></div>
-          <h3>3D Textured &amp; Gold Leaf</h3>
-          <p>Handcrafted 3D textured paintings with gold leafing details — a perfect match for modern interiors.</p>
-          <div class="tags"><span>#TexturedArt</span><span>#3DPainting</span></div>
+          <div class="collection-art art-dervish">
+            <img src="images/gallery/dervish-amber.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <h3>Sufi &amp; Spiritual Art</h3>
+          <p>Whirling dervish scenes woven with calligraphy — pieces that bring stillness and devotion to a room.</p>
+          <div class="tags"><span>#SufiArt</span><span>#SpiritualDecor</span></div>
         </article>
 
         <article class="collection-card">
-          <div class="collection-art art-equestrian"></div>
-          <h3>Fine Art &amp; Portraits</h3>
-          <p>Detailed, hand-painted portraits — strength, grace and timeless elegance for sophisticated interiors.</p>
-          <div class="tags"><span>#FineArt</span><span>#EquestrianDecor</span></div>
+          <div class="collection-art art-landscape">
+            <img src="images/gallery/waterfall-canyon.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <h3>Landscape &amp; Nature</h3>
+          <p>Rich oil landscapes — forests, rivers, coastlines — that bring the outdoors into modern interiors.</p>
+          <div class="tags"><span>#LandscapeArt</span><span>#OilPainting</span></div>
         </article>
 
         <article class="collection-card">
-          <div class="collection-art art-abstract"></div>
+          <div class="collection-art art-abstract">
+            <img src="images/gallery/abstract-vortex.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
           <h3>Abstract Art</h3>
           <p>Where colors speak louder than words — bold abstract pieces that transform any wall into a masterpiece.</p>
           <div class="tags"><span>#Abstract</span><span>#ModernArt</span></div>
         </article>
 
         <article class="collection-card">
-          <div class="collection-art art-resin"></div>
-          <h3>Resin &amp; Landscape</h3>
-          <p>High-gloss resin finishes and rich landscape scenes — vibrant color and texture, ready for a new home.</p>
-          <div class="tags"><span>#ResinPainting</span><span>#HomeDecorIdeas</span></div>
+          <div class="collection-art art-equestrian">
+            <img src="images/gallery/horse-classic.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <h3>Fine Art &amp; Portraits</h3>
+          <p>Detailed, hand-painted portraits — strength, grace and timeless elegance for sophisticated interiors.</p>
+          <div class="tags"><span>#FineArt</span><span>#EquestrianDecor</span></div>
+        </article>
+
+        <article class="collection-card">
+          <div class="collection-art art-floral">
+            <img src="images/gallery/rose-macro.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <h3>Floral &amp; Botanical</h3>
+          <p>High-gloss, richly embellished floral pieces with vibrant color for a fresh statement wall.</p>
+          <div class="tags"><span>#ResinPainting</span><span>#AestheticDecor</span></div>
+        </article>
+
+        <article class="collection-card">
+          <div class="collection-art art-sculptural">
+            <img src="images/gallery/led-medallion.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <h3>Sculptural &amp; Backlit</h3>
+          <p>Dimensional, illuminated wall art that adds a warm glow and a true conversation piece to any room.</p>
+          <div class="tags"><span>#BacklitArt</span><span>#StatementPiece</span></div>
         </article>
 
         <article class="collection-card collection-card-cta">
@@ -157,9 +271,61 @@
     </div>
   </section>
 
+  <section class="wall-lab" id="wall-lab">
+    <div class="container wall-lab-head">
+      <p class="eyebrow center">Style It Your Way</p>
+      <h2 class="section-title center">See It On Your Wall</h2>
+      <p class="section-lede center">
+        Scroll to preview our pieces styled across real interiors — find the wall tone
+        that suits your space before you order.
+      </p>
+    </div>
+
+    <div class="wall-scroller">
+      <div class="wall-sticky">
+        <div class="wall-frame" id="wallFrame">
+          <img class="wall-photo" data-layer="a" src="" alt="">
+          <img class="wall-photo" data-layer="b" src="" alt="">
+          <div class="wall-caption">
+            <span class="wall-caption-color" id="wallColorName">Warm Ivory</span>
+            <span class="wall-caption-piece" id="wallPieceName">Highland Waterfall</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wall-steps">
+        <div class="wall-step is-active" data-color="#e9e0cd" data-photo="images/gallery/waterfall-canyon.jpg" data-name="Warm Ivory" data-piece="Highland Waterfall">
+          <h3>Warm Ivory</h3>
+          <p>Soft, neutral warmth that lets landscape pieces breathe — a classic pairing for living rooms and studies.</p>
+        </div>
+        <div class="wall-step" data-color="#211f1e" data-photo="images/gallery/textured-gold-abstract.jpg" data-name="Charcoal Noir" data-piece="Gilded Peaks">
+          <h3>Charcoal Noir</h3>
+          <p>A deep, dramatic backdrop that makes gold leafing and bright textures glow.</p>
+        </div>
+        <div class="wall-step" data-color="#5c6b52" data-photo="images/gallery/horse-modern.jpg" data-name="Sage Retreat" data-piece="Modern Equestrian Abstract">
+          <h3>Sage Retreat</h3>
+          <p>An earthy, calming green that grounds bold color-block and portrait pieces.</p>
+        </div>
+        <div class="wall-step" data-color="#1c2b45" data-photo="images/gallery/riverside-cottage.jpg" data-name="Deep Navy" data-piece="English Riverside Serenity">
+          <h3>Deep Navy</h3>
+          <p>A rich, moody navy that lets softer, detailed landscapes take center stage.</p>
+        </div>
+        <div class="wall-step" data-color="#8a7c6c" data-photo="images/gallery/abstract-harmony.jpg" data-name="Warm Taupe" data-piece="Abstract Harmony">
+          <h3>Warm Taupe</h3>
+          <p>A soft, sophisticated neutral that flatters muted abstract palettes.</p>
+        </div>
+        <div class="wall-step" data-color="#26211a" data-photo="images/gallery/calligraphy-medallion.jpg" data-name="Moonlit Gold" data-piece="Backlit Calligraphy Medallion">
+          <h3>Moonlit Gold</h3>
+          <p>A moody, candlelit setting that makes backlit and gold-toned medallions shine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="featured" id="featured">
     <div class="container featured-inner">
       <div class="featured-art art-calligraphy-large" aria-hidden="true">
+        <img src="images/gallery/asma-ul-husna.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
         <span class="featured-label">Decoravish<br>Calligraphy Collection</span>
       </div>
       <div class="featured-copy">
