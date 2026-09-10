@@ -59,6 +59,9 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   slides.forEach((s) => slideObserver.observe(s));
 
   let autoplayTimer = null;
+  let isHovering = false;
+  let isSectionVisible = false;
+
   function startAutoplay() {
     if (prefersReducedMotion) return;
     stopAutoplay();
@@ -69,13 +72,28 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
   }
   function stopAutoplay() {
     if (autoplayTimer) clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  }
+  function refreshAutoplay() {
+    if (isSectionVisible && !isHovering) startAutoplay();
+    else stopAutoplay();
   }
 
-  track.addEventListener('pointerenter', stopAutoplay);
-  track.addEventListener('pointerleave', startAutoplay);
-  track.addEventListener('touchstart', stopAutoplay, { passive: true });
+  track.addEventListener('pointerenter', () => { isHovering = true; refreshAutoplay(); });
+  track.addEventListener('pointerleave', () => { isHovering = false; refreshAutoplay(); });
+  track.addEventListener('touchstart', () => { isHovering = true; refreshAutoplay(); }, { passive: true });
+  track.addEventListener('touchend', () => { isHovering = false; refreshAutoplay(); });
 
-  startAutoplay();
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isSectionVisible = entry.isIntersecting;
+        refreshAutoplay();
+      });
+    },
+    { threshold: 0.3 }
+  );
+  sectionObserver.observe(track.closest('.artwork-carousel'));
 })();
 
 /* ---------- Wall Lab: scroll-driven wall styling preview ---------- */
