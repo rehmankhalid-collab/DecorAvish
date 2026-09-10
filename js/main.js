@@ -151,3 +151,54 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
   activateStep(steps[0]);
 })();
+
+/* ---------- Artwork lightbox ---------- */
+(function initLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const triggers = Array.from(document.querySelectorAll('[data-lightbox-img]'));
+  if (!lightbox || !triggers.length) return;
+
+  const backdrop = document.getElementById('lightboxBackdrop');
+  const closeBtn = document.getElementById('lightboxClose');
+  const imageEl = document.getElementById('lightboxImage');
+  const tagEl = document.getElementById('lightboxTag');
+  const titleEl = document.getElementById('lightboxTitle');
+  const descEl = document.getElementById('lightboxDesc');
+  const orderBtn = document.getElementById('lightboxOrderBtn');
+
+  let lastFocused = null;
+
+  function open(trigger) {
+    const { lightboxImg, lightboxTitle, lightboxTag, lightboxDesc } = trigger.dataset;
+
+    imageEl.src = lightboxImg;
+    imageEl.alt = lightboxTitle || '';
+    tagEl.textContent = lightboxTag || '';
+    titleEl.textContent = lightboxTitle || '';
+    descEl.textContent = lightboxDesc || '';
+    orderBtn.href = `https://wa.me/923710433707?text=${encodeURIComponent(
+      `Hi! I'm interested in the "${lightboxTitle}" piece.`
+    )}`;
+
+    lastFocused = trigger;
+    lightbox.hidden = false;
+    document.body.classList.add('lightbox-open');
+    closeBtn.focus();
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    document.body.classList.remove('lightbox-open');
+    if (lastFocused) lastFocused.focus();
+  }
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => open(trigger));
+  });
+
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) close();
+  });
+})();
